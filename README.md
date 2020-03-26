@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Michael Ruth's Github Page
 
 You can use the [editor on GitHub](https://github.com/mruth202/mruth202.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
