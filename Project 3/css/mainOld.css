@@ -1,0 +1,77 @@
+#boxes{
+  width:100px;
+  top: 50px;
+  text-align:left;
+  margin-left: 10%;
+  position: fixed;
+}
+
+#numbers{
+  width:200px;
+  top: 50px;
+  text-align:left;
+  margin-left: 0%;
+  position: fixed;
+}
+
+.standings{
+  background-image: url("../images/standings.png");
+  position: relative;
+  width:200px;
+  height:475px;
+  margin-bottom: 20px;
+  display:inline-block;
+}
+
+.box{
+  position: relative;
+  width:100px;
+  height:100px;
+  margin-bottom: 30px;
+  display:inline-block;
+}
+
+
+p.trans{
+    width:50%;
+    margin: 0px auto;
+}
+div.background {
+  border: 0px solid black;
+  
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  width: 50%;
+  margin:0px auto;
+}
+
+div.spacer {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 0px solid black;
+    opacity: 0;
+    width: 50%;
+    margin:0px auto;
+    padding-top: 50%;
+  }
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+body {
+  background-image: url('../images/field.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
