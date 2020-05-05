@@ -77,6 +77,34 @@ var resetBoxPositions = anime({
   loop: false
 });
 
+function playCheer(idStr){
+  document.getElementById(idStr).play();
+}
+
+var foxPlayed=false;
+var cbsPlayed=false;
+var nbcPlayed=false;
+var espnPlayed=false;
+
+function playSong(idStr){
+  if (idStr === 'cbsId'&& !cbsPlayed){
+    document.getElementById(idStr).play();
+    cbsPlayed = true;
+  }
+  else if (idStr === 'foxId'&& !foxPlayed){
+    document.getElementById(idStr).play();
+    foxPlayed = true;
+  }
+  else if (idStr === 'nbcId'&& !nbcPlayed){
+    document.getElementById(idStr).play();
+    nbcPlayed = true;
+  }
+  else if (idStr === 'espnId'&& !espnPlayed){
+    document.getElementById(idStr).play();
+    espnPlayed = true;
+  }
+}
+
 var scrollSection = 0;
 // 0 - Intro section .. no images
 // 1 - nfcNorth ..
@@ -89,8 +117,8 @@ function scrollFunc() {
   scrollPos = document.documentElement.scrollTop;
 
   var elt = document.getElementById("scrollId");
-  elt.innerHTML = "" + Math.round(scrollPos);
- //elt.innerHTML = "";
+  //elt.innerHTML = "" + Math.round(scrollPos);
+  elt.innerHTML = "";
 //alert(elt);
   //document.body.scrollTop;
   //document.documentElement.scrollTop;
@@ -109,9 +137,11 @@ function scrollFunc() {
     //alert("entered scrollSection 2");
     setDivision('nfcNorth');
     setNumbers(true);
-    setTimeout( function() {nfcNorthAnim1.play(),500;} );
+    playSong("foxId");
+    setTimeout( function() {nfcNorthAnim1.play(),2000;} );
     //setTimeout( function() {nfcNorthAnim2(),500;} );
     
+
   }  else if ( scrollSection != 3 && 
              scrollPos >= sp * 3 && scrollPos < sp * 4) {
     scrollSection = 3;
@@ -123,7 +153,8 @@ function scrollFunc() {
 scrollSection = 4;
 setDivision('nfcEast');
 setNumbers(true);
-setTimeout( function() {nfcEastAnim1.play(),500;} );
+playSong("cbsId");
+setTimeout( function() {nfcEastAnim1.play(),2000;} );
 } 
 
    else if ( scrollSection != 5 && 
@@ -137,6 +168,7 @@ scrollPos >= sp * 6 && scrollPos < sp * 7) {
 scrollSection = 6;
 setDivision('nfcSouth');
 setNumbers(true);
+playSong("nbcId");
 setTimeout( function() {nfcSouthAnim1.play(),500;} );
 } 
 
@@ -151,6 +183,7 @@ scrollPos >= sp * 8 && scrollPos < sp * 9) {
 scrollSection = 8;
 setDivision('nfcWest');
 setNumbers(true);
+playSong("espnId");
 setTimeout( function() {nfcWestAnim1.play(),500;} );
 } 
 
